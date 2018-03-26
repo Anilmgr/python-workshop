@@ -1,0 +1,16 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+</head>
+<body >
+{% for posts in abc %}
+<hr><br>
+<b><a href="{% url 'post_details' posts.pk %}">{{ posts.title }}</a> </b> <br/>
+
+{% endfor %}
+<hr>
+</body>
+</html>

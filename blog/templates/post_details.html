@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><style>
+	body {
+	font-size:25px;
+	}
+</style>
+	<title>Detail</title>
+</head>
+<body>
+<b>Titlle:</b>
+<br/>   
+{{ post.title }} 
+<br/>
+<br/>
+<b>Body:</b>
+<br/> 
+{{ post.body }} 
+<br/>
+<b>Author:</b> {{ post.auther }} 
+<br/>
+<b>Created Date:</b> {{ post.created }} 
+<br/>
+<a href="{% url 'edit_post' post.pk %}"><button>  Edit </button></a>
+<a href="{% url 'delete_post' post.pk %}"><button>  Delete </button></a>
+<br/>
+
+</body>
+</html>
